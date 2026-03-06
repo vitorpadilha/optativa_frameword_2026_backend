@@ -1,4 +1,4 @@
-import { Column, Entity } from "../../../app-frontend/node_modules/typeorm/index";
+import { Column, Entity } from "typeorm";
 
 @Entity("pessoas")
 class Pessoa {

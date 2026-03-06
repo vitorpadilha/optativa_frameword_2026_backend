@@ -1,8 +1,15 @@
+import cors from "cors";
 import express from "express";
 import { AppDataSource } from "./data-source";
 import { Pessoa } from "./entity/Pessoa";
 
 const app = express();
+
+app.use(cors({
+  origin: ["http://localhost:5500",
+    "http://127.0.1:5500"
+  ]
+})); // habilita CORS
 app.use(express.json());
 
 AppDataSource.initialize()
